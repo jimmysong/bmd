@@ -879,12 +879,12 @@ func (a *AddrManager) Good(addr *wire.NetAddress) {
 			}
 		}
 	}
-	a.nNew--
 
 	if oldBucket == -1 {
 		// What? wasn't in a bucket after all.... Panic?
 		return
 	}
+	a.nNew--
 
 	bucket := a.getTriedBucket(ka.na)
 
